@@ -1,2 +1,2 @@
 # scopelliti2015
-[Rendered markdown for project prosal](writeup/project_proposal.md)
+[Psych 251 Project Proposal markdwon](writeup/project_proposal.md)

@@ -1,0 +1,291 @@
+---
+title: "Replication of You call it 'Self-Exhuberance'; I call it 'Bragging': Miscalibrated Prediction of Emotional Responses to Self-Promotion (Study 2) by Scopelliti, Loewenstein, Vosgerau (2015, *Psychological Science*)"
+author: "Replicated by Jaclyn Schwartz; contact: jschwar2@stanford.edu"
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+output:
+  html_document:
+    toc: yes
+    toc_depth: 3
+    toc_float:
+      collapsed: false
+---
+
+<!-- Replication reports should all use this template to standardize reporting across projects.  These reports will be public supplementary materials that accompany the summary report(s) of the aggregate results. -->
+
+##Introduction
+
+Scopelliti et al., 2015 explored how self-promotion (i.e., communicating one’s positive traits) can lead to contradicting emotional perspectives. The self-promoter may perceive that the recipient feels more positive emotions and less negative emotions about the promoter’s behavior than the recipient’s true emotional reaction. These "failures of emotional perspective taking" can have negative consequences, where recipients may see the self-promoters as bragging. The authors argued that "people tend to underestimate differences between their own and others' emotional reactions" by using their own emotions as "anchors to estimate" their recipient's emotions. They hypothesized that "self-promoters will overestimate the extent to which their behavior elicits positive emotional reactions in others, and underestimate the extent to which their behavior elicits negative emotional reactions."  
+
+##Methods
+
+###Power Analysis
+
+I used G*Power 3.1 to conduct my a priori power analysis to plan the sample size. Specifically, I used a repeated-measures ANOVA for the main within-between (emotion x condition) interaction to plan my sample size since the authors used a 2-way mixed ANOVA, with 2 (between) groups and 7 (within) measurements to calculate their effects. The authors' reported effect size was $\eta_{p}^{2}$ = .07, which corresponds to effect size of f = 0.274. I set $\alpha$ = .05. In order to achieve 80% power, the yielded sample size was very small (N=16) either because the authors over-powered their sample number or the analysis yielded a huge effect. Therefore, I set the power to = .95 to increase the proposed sample size. Thus, my determined sample size is 50 to achieve 95% power. 
+
+![G*power screenshot to determine sample size](PwrAnalysis.png)
+
+###Planned Sample
+
+We are planning to recruit 50 (25 per condition) workers based on the power analysis. The authors "restricted participation to respondents who were located in the United States and had not participated in Experiment 1." We will therefore restrict participation to those located in the United States. Experiment 2 is the only study from the paper undergoing replication at this time, so the "previous participation" preselection rule does not apply. 
+
+###Materials
+
+All materials were accessed through OSF (https://osf.io/evikb/). Participants completed *one* of the two surveys depending on random condition assignment. One survey (self-promotion) asks, “Can you describe a situation in which you have bragged to someone else about something? Please be as detailed as possible.” There is then a series of 7 "discrete emotions" (pride, happiness, annoyance, feeling inferior, jealousy, upset, anger), in which participants are asked, “how you think the person you bragged to has felt in that situation” on a scale from 1 – 7 (*1=not at all to 7=very much*). The other survey (recipient-of-self-promotion) asks, “Can you describe a situation in which someone has bragged to you about something? Please be as detailed as possible.” There is then a series of the same 7 "discrete emotions" , in which participants are asked to rate “how you felt in the situation you just described” on a scale from 1 – 7 (*1=not at all to 7=very much*).
+
+###Procedure	
+
+Participants completed a short survey on Amazon Mechanical Turk (MTurk). Participants were randomly assigned to one of two conditions: the self-promotion condition or the recipient-of-self-promotion condition. "Sample size was set to a minimum of 75 participants per condition, and the data were analyzed only after data collection had been completed. 154 Amazon Mechanical Turk workers accessed and completed a short study on personality and received $0.50 as compensation. As in Experiment 1, participants described an instance of having engaged in self-promotion or having been the recipient of someone else's self-promotion. Next, participants in the self-promotion condition were asked to indicate the extent to which their counterpart had felt happy for, proud of, annoyed by, jealous of, angry at, upset by, and inferior to them, whereas participants in the recipient-of-self-promotion condition were asked to rate their own level of these experienced feelings. All emotions were rated on 7-point scales from *not at all* (1) to *very much* (7)." The replication will instead recruit 25 participants per condition based on the power analysis, and pilot data has been collected and analyzed. My pilot data suggest that the survey takes approximately 4-5 minutes to complete, so participants will receive 60 cents as compensation.
+
+###Analysis Plan
+
+This experiment is a 2 (reporter: self-promoter vs. recipient) x 2 (emotions: emotions experienced by self vs. predicted emotions) mixed design. The authors performed a 2-way mixed ANOVA on ratings of the 7 emotional reactions. The *between-subjects* factor is condition (SP vs. R of SP), and the *within-subjects* factor is emotion. Post-hoc F-tests were performed to examine which emotions were over- or under-estimated. The topics of self-promotion (i.e., the descriptions of bragging) are categorized by 2 research assistants (RAs) only to be included as covariates. The 2 RAs independently categorized the descriptions into predefined categories of (a) achievements; (b) individual traits and skills; (c) money, possessions, power, and status; (d) family and relationships; and (e) luck. These covariates are dummy coded, and "luck serves as the baseline topic." Data will be excluded if participants claimed to have never bragged or if the situation described is not clearly bragging as defined by the coders. Demographic variables of gender and age seem to only be reported as sample descriptives in the original article, so this replication will follow that strategy.
+
+**Key analysis of interest: A 2-way mixed ANOVA on ratings of the 7 emotional reactions, where emotion is the within-subjects factor, and condition is the between-subjects factor.**  If the interaction is significant, I will conduct post-hoc F tests to examine which emotions are over- or under-estimated.
+
+###Differences from Original Study
+
+Differences include planned sample size and possibly the implementation. The paper doesn't specify if the surveys were created on MTurk or through another medium, such as Qualtrics. My implementation will use MTurk to deliver the Qualtrics survey, which may be a slightly different implementation than the original study. I don't anticipate these differences to make a difference based on the large effect from the original study and the materials being presented almost exactly as is described in the original paper.
+
+<!-- ### Methods Addendum (Post Data Collection) (comment this section out) -->
+
+<!-- You can comment this section out prior to final report with data collection. -->
+
+<!-- #### Actual Sample -->
+<!--   Sample size, demographics, data exclusions based on rules spelled out in analysis plan -->
+
+<!-- #### Differences from pre-data collection methods plan -->
+<!--   Any differences from what was described as the original plan, or “none”. -->
+
+
+##Results
+
+The main statistic the authors report is the condition x emotion interaction, *F*(6,912)=10.90, *p*<.001, $\eta_{p}^{2}$ = .07. The main aim of the replication is to replicate this interaction. If significant, I will aim to replicate the post-hoc difference in means for each emotion to show that people in the self-promotion condition overestimated the extent to which recipients felt happy for them (*M*=4.88, *SD*=1.78, vs. *M*=3.70, *SD*=1.91), *F*(1,145)=10.85, *p*=.001, $\eta_{p}^{2}$ = .07, and proud of them (*M*=4.33, *SD*=1.81, vs. *M*=3.08, *SD*=1.77), *F*(1,145)=12.12, *p*<.001, $\eta_{p}^{2}$ = .08, and also underestimated the extent to which recipients felt annoyed (*M*=3.54, *SD*=1.94, vs. *M*=4.82, *SD*=2.15), *F*(1,145)=11.56, *p*=.001, $\eta_{p}^{2}$ = .07.
+
+### Data preparation
+
+Data preparation following the analysis plan. Here is the link to the replication Qualtrics survey: https://stanforduniversity.qualtrics.com/jfe/form/SV_4O72UJKN7nEkE73
+
+	
+```{r include=F}
+###Data Preparation
+####Load Relevant Libraries and Functions
+library(lme4)
+library(nlme)
+library(reshape2)
+library(ggplot2)
+library(Matrix)
+library(base)
+library(lmerTest)
+library(psych)
+library(car)
+library(effects)
+library(lm.beta)
+library(tidyverse)
+library(ggthemes) 
+library(ez)
+library(broom)
+library(knitr)
+knitr::opts_chunk$set(error = TRUE)
+####Import data: Reading in csv from Qualtrics
+PilotQ <- read_csv("Scopelliti2015_November 15, 2017_18.54.csv")
+head(PilotQ)
+####Data exclusion / filtering
+#####Deleting row 2 bc not informative
+PilotQ <- PilotQ[-(1:2), ]
+#####Keeping only necessary Columns (selecting only the participant ID, Input condition, and Answer items)
+PilotQ <- PilotQ %>%
+  select(ResponseId, starts_with("Duration"), Gender, Age, Condition.RSP.desc, Cond_RSP_happy, Cond_RSP_proud, Cond_RSP_angry, Cond_RSP_annoyed, Cond_RSP_inferior, Cond_RSP_jealous, Cond_RSP_upset, Condition.SP.desc, Cond_SP_happy, Cond_SP_proud, Cond_SP_angry, Cond_SP_annoyed, Cond_SP_inferior, Cond_SP_jealous, Cond_SP_upset) 
+#####Adding Covariate columns (a) achievements; (b) individual traits and skills; (c) money, possessions, power, and status; (d) family and relationships; and (e) luck. 
+PilotQ$ach_dummy <- c(0, 1, 0, 1)
+PilotQ$ind_skill_dummy <- c(0, 0, 0, 0)
+PilotQ$poss_money_status_power_dummy <- c(0, 0, 1, 0)
+PilotQ$fam_rel_dummy <- c(1, 0, 0, 0)
+PilotQ$luck_dummy <- c(0, 0, 0, 0)
+#####Renaming my variables
+PilotQ <- PilotQ %>%
+  rename(happy_RSP = Cond_RSP_happy) %>%
+  rename(proud_RSP = Cond_RSP_proud) %>%
+  rename(angry_RSP = Cond_RSP_angry) %>%
+  rename(annoyed_RSP = Cond_RSP_annoyed) %>%
+  rename(inferior_RSP = Cond_RSP_inferior) %>%
+  rename(jealous_RSP = Cond_RSP_jealous) %>%
+  rename(upset_RSP = Cond_RSP_upset) %>%
+  rename(happy_SP = Cond_SP_happy) %>%
+  rename(proud_SP = Cond_SP_proud) %>%
+  rename(angry_SP = Cond_SP_angry) %>%
+  rename(annoyed_SP = Cond_SP_annoyed) %>%
+  rename(inferior_SP = Cond_SP_inferior) %>%
+  rename(jealous_SP = Cond_SP_jealous) %>%
+  rename(upset_SP = Cond_SP_upset) 
+####Prepare data for analysis - create columns etc.
+PilotQ_long <- PilotQ %>%
+  gather(Emotion, Rating, 
+        happy_SP, proud_SP, angry_SP, annoyed_SP, inferior_SP, jealous_SP, upset_SP, 
+        happy_RSP, proud_RSP, angry_RSP, annoyed_RSP, inferior_RSP, jealous_RSP, upset_RSP) %>%
+  separate(Emotion, c("Emo", "Cond"), "_") 
+PilotQ_long <- gather(PilotQ_long, condition , description, Condition.RSP.desc, Condition.SP.desc)
+PilotQ_long
+PilotQ_long <- PilotQ_long[order(PilotQ_long$ResponseId),]
+PilotQ_long <- PilotQ_long %>%
+  filter(!is.na(description))
+PilotQ_long <- PilotQ_long %>%
+  filter(!is.na(Rating))
+head(PilotQ_long)
+#####Making sure variables are set to correct data class
+######Converting rating, my DV, to numeric data class
+PilotQ_long$Rating <- as.numeric(PilotQ_long$Rating)
+######Converting Id, discrete emotions, condition, and covariates into factors
+PilotQ_long$ResponseId <- as.factor(PilotQ_long$ResponseId)
+PilotQ_long$Emo <- as.factor(PilotQ_long$Emo)
+PilotQ_long$Cond <- as.factor(PilotQ_long$Cond)
+PilotQ_long$ach_dummy <- as.factor(PilotQ_long$ach_dummy)
+contrasts(PilotQ_long$ach_dummy) = c(0,1)
+PilotQ_long$ind_skill_dummy <- as.factor(PilotQ_long$ind_skill_dummy)
+######contrasts(PilotQ_long$ind_skill_dummy) = c(0,1)
+###### Since contrasts can only be applied to factors with 2 or more levels and no subject endorsed this category "ind_skill_dummy", this covariate will be left out for now
+PilotQ_long$poss_money_status_power_dummy <- as.factor(PilotQ_long$poss_money_status_power_dummy)
+contrasts(PilotQ_long$poss_money_status_power_dummy) = c(0,1)
+PilotQ_long$fam_rel_dummy <- as.factor(PilotQ_long$fam_rel_dummy)
+contrasts(PilotQ_long$fam_rel_dummy) = c(0,1)
+PilotQ_long$luck_dummy <- as.factor(PilotQ_long$luck_dummy)
+###### contrasts(PilotQ_long$luck_dummy) = c(0,1)
+###### Since contrasts can only be applied to factors with 2 or more levels and no subject endorsed this category "luck_dummy", this covariate will be left out for now
+```
+
+### Confirmatory analysis
+
+#### Descriptives
+```{r}
+Npart <- length(PilotQ$ResponseId) # 4
+PilotQ$Age <- as.numeric(PilotQ$Age)
+mean_age <- mean(PilotQ$Age) # 27
+sd_age <- sd(PilotQ$Age) # 1.825742
+sd_age_r <- round(sd_age, digits = 2) 
+PilotQ$Gender <- as.factor(PilotQ$Gender)
+Nmale <- PilotQ[which(PilotQ$Gender == '1'), ]
+Nfemale <- PilotQ[which(PilotQ$Gender == '2'), ]          
+percent_female <- (3/4)*100 # 75%
+percent_male <- (1/4)*100 # 25% 
+```
+`r Npart` participants (mean age = `r mean_age` years, *SD* = `r sd_age_r`; `r percent_male`% male, `r percent_female`% female) accessed and completed a short study on personality.
+
+#### 2-way mixed ANOVA
+```{r}
+# 2-way mixed ANOVA on ratings with condition as between-subjects factor, emotion as a within-subjects factor
+mainInt <- ezANOVA(PilotQ_long,
+        dv = Rating,
+        wid = ResponseId,
+        within = Emo,
+        between = Cond,
+        observed = .(ach_dummy, poss_money_status_power_dummy, fam_rel_dummy),
+        detailed = T)
+print(mainInt)
+kable((mainInt), digits = 3)
+
+# Calculating partial eta squared
+SSn <- mainInt[[1]][[4,"SSn"]] # 15.42857
+SSd <- mainInt[[1]][[4,"SSd"]] # 19.14286
+part_eta <- SSn/(SSn + SSd) # 0.446281
+part_eta_r <- round(part_eta, digits = 2) # 0.45
+
+# Saved parameters for the Condition main effect
+Cond_Fstat <- mainInt[[1]][[2,"F"]] # 0.147541
+Cond_Fstat_r <- round(Cond_Fstat, digits = 3) # 0.148
+Cond_pval <- mainInt[[1]][[2,"p"]] # 0.7378888
+Cond_pval_r <- round(Cond_pval, digits = 3) # 0.738
+Cond_num_df <- mainInt[[1]][[2]][[2]] # 1
+Cond_den_df <- mainInt[[1]][[3]][[2]] # 2
+
+# Saved parameters for the Emotion main effect
+Emo_Fstat <- mainInt[[1]][[3,"F"]] # 3.850746
+Emo_Fstat_r <- round(Emo_Fstat, digits = 3) # 3.851
+Emo_pval <- mainInt[[1]][[3,"p"]] # 0.02241078
+Emo_pval_r <- round(Emo_pval, digits = 3) # 0.022
+Emo_num_df <- mainInt[[1]][[2]][[3]] # 6
+Emo_den_df <- mainInt[[1]][[3]][[3]] # 12
+
+# Saved parameters for the interaction
+Fstat <- mainInt[[1]][[4,"F"]] # 1.61194
+Fstat_r <- round(Fstat, digits = 3) # 1.612
+pval <- mainInt[[1]][[4,"p"]] # 0.2265528
+pval_r <- round(pval, digits = 3) # 0.227
+num_df <- mainInt[[1]][[2]][[4]] # 6
+den_df <- mainInt[[1]][[3]][[4]] # 12
+```
+
+There is a main effect of *Emotion*, *F*(`r Emo_num_df`,`r Emo_den_df`) = `r Emo_Fstat_r`, *p* = `r Emo_pval_r` but no main effect of *Condition*, *F*(`r Cond_num_df`,`r Cond_den_df`) = `r Cond_Fstat_r`, *p* = `r Cond_pval_r`, which is consistent with the authors' findings. However, the interaction statistic that I aimed to replicate is not significant, *F*(`r num_df`,`r den_df`) = `r Fstat_r`, *p* = `r pval_r`, $\eta_{p}^{2}$ = `r part_eta_r`. I therefore did not conduct post-hoc tests since the interaction wasn't significant, which will impact the interpretation of any simple effects. Within this function, there is a parameter for covariates. The paper includes these covariates as a between-subjects factor; however, there is an output message for this function saying, "Implementation of ANCOVA in this version of ez is experimental and not yet fully validated. Also, note that ANCOVA is intended purely as a tool to increase statistical power; ANCOVA can not eliminate confounds in the data. Specifically, covariates should: (1) be uncorrelated with other predictors and (2) should have effects on the DV that are independent of other predictors. Failure to meet these conditions may dramatically increase the rate of false-positives." I therefore, used the aov function below and included covariates in this model.
+
+Here is another way of conducting the ANOVA with the aov because of the warning message from ezANOVA and to see if results are consistent with the ezANOVA function. 
+```{r}
+# With Covariates
+mainInt_aov <- aov(Rating~ (Cond*Emo) + ach_dummy + poss_money_status_power_dummy + fam_rel_dummy + Error(ResponseId/(Emo)), data = PilotQ_long)
+print(summary(mainInt_aov))
+# Without Covariates
+mainInt_aov_noCov <- aov(Rating~ (Cond*Emo) + Error(ResponseId/(Emo)), data = PilotQ_long)
+print(summary(mainInt_aov_noCov))
+```
+The results of the aov model *with* covariates are consistent with results from the ezANOVA function. Further, when I remove covariates from the model, the effects remain the same. I did not include age or gender in my models because the original paper does not do so.
+
+#### Graphing the interaction
+```{r, include=FALSE}
+# Bargraph with SE bars
+meanAndSem=function(x) c(mn = mean(x,na.rm=TRUE), se = sd(x,na.rm=T)/sqrt((sum(as.double(!is.na(x))))), len=sum(as.double(!is.na(x))))
+require(plyr)
+require(reshape)
+Fig1 = ddply(PilotQ_long, .(Cond,Emo), summarize,mn = meanAndSem(Rating)[1], se = meanAndSem(Rating)[2])
+Fig1
+limits = aes(ymax = mn + se, ymin=mn - se)
+```
+
+```{r}
+Fig1_plot = ggplot(Fig1, aes(x = factor(Emo), y = mn, fill = factor(Cond)))+geom_bar(width=.9, stat = 'identity', position=position_dodge(.95),size=1.5,alpha = 0.7)+labs(title = "Miscalibrated Predictions of Responses to Self-Promotion", y="Extent of Emotion",x="Emotion")+geom_errorbar(limits,color = 'black',position=position_dodge(.95),width=0.25) + labs(color = "Group") + theme(axis.title=element_text(face="bold",size="14", color="black")) + theme(title = element_text(face = "bold")) +  scale_fill_discrete("Group", labels = c("Experienced by Recipient", "Predicted by Self-Promoter"))
+print(Fig1_plot)
+```
+
+![Fig.2 from orginal paper (Scopelliti et al., 2015)](Fig.2_Scopelliti2015.png)
+This replication graph and the included original graph (Fig. 2) shows self-Promoters' predictions of recipients' experienced emotions and recipients' ratings of their actual experienced emotions. Error bars represent +/-1 SEM. For the replication graph, some of the error bars are huge due to the low N of this pilot. The replication graph seems to replicate some parts of the graph in the paper. For instance, there is no difference in anger between the two conditions. The paper reports that there is no difference in feeling upset; however, here there might be a difference in upset; but this is difficult to interpret because the error bars are just touching. The paper reports that self-promoters overestimate the extent to which recipients feel happy and proud. In this replication, there is no difference in feeling happy, but we do seem to replicate the effect that self-promoters overestimate recipients feeling proud. The paper reports that self-promoters overestimated the extent to which recipients felt jealous; however, there seems to be no difference in this replication. The paper reports that self-promoters marginally overestimate the extent to which recipients feel inferior to them; however, this replication reports no difference. The paper reports that self-promoters underestimated the extent to which recipients were annoyed, which does seem to replicate in this pilot. Overall, however, these simple effects are difficult to interpret given the non-significant interaction of emotion and condition.
+
+###Exploratory analyses
+
+If the interaction after actual data collection is significant, here is the code I would use to conduct post-hoc F tests.
+
+```{r}
+#SPcond <- PilotQ_long[which(PilotQ_long$Cond == 'SP'),]
+#RSPcond <- PilotQ_long[which(PilotQ_long$Cond == 'RSP'),]
+
+# SP_simpleEffects <- ezANOVA(SPcond,
+#         dv = Rating,
+#         wid = ResponseId,
+#         between = NULL,
+#         within = Emo,
+#         detailed = T)
+# 
+# RSP_simpleEffects <- ezANOVA(RSPcond,
+#         dv = Rating,
+#         wid = ResponseId,
+#         between = NULL,
+#         within = Emo,
+#         detailed = T)
+```
+
+## Discussion
+
+### Summary of Replication Attempt
+
+I failed to replicate the main interaction of *Condition* and *Emotion*.  It might be due to the low N of this pilot. However, I did replicate the significant main effect of *Emotion* and non-significant main effect of *Condition*. I would consider this a partial replication for this pilot data.
+
+### Commentary
+
+(a) I commented out the exploratory code I would use to conduct post-hoc tests if the interaction ends up being significant. However, from the graph, it looks like we replicate the effect that self-promoters overestimated the extent to which recipients felt proud and underestimate the extent to which recipients were annoyed. It also looks like we replicated no difference in anger between the two conditions. It seems that no other simple effects were replicated. However, this is difficult to interpret given the non-significant interaction of emotion and condition.
+
+(b) Although this replication partially failed, the F statistic is in the right direction and with more people, might attain significance.
+
+(c) The challenge I mainly faced was including the Topic variable as a covariate for the mixed ANOVA. One thing to note is that I coded the topics of bragging myself instead of having 2 RAs code these topics since this is the pilot. I will be having another student help me code these topic for actual data collection. The authors made "Topic" of bragging description a between-subjects factor. I tried gathering the data to have a "Topic" variable, which includes the dummy coded topics for each subject (i.e., long format; see commented code below) in order to exactly replicate the authors' analysis. However, this resulted in a dataframe with duplicated rows (7 rows for Emotion * 5 rows for Covariates). When I tried deleting the duplicated rows, there was always something that wasn't quite right with the other variables, so I left the covariates as "observed" variables in the mixed ezANOVA model and I use the covariates as wide-format variables (e.g., topic 1 + topic 2, etc...) in the second ANOVA model using the aov function. However, the primary reason I added this aov model is because of the warning message for ezANOVA regarding the that ezANOVA "is experimental and not yet fully validated." The authors report that the interaction effect remained consistent with covariates removed, so if the replication is successful it shouldn't make a difference. The aov function seems to be working well with how I formatted the data, so I may keep it that way moving forward with the replication, but any feedback on this is appreciated!
+```{r}
+#PilotQ_long <- PilotQ_long %>%
+#  gather(Topics , Topic_Cov,
+#        ach_dummy, ind_skill_dummy, poss_money_status_power_dummy, fam_rel_dummy, luck_dummy) 
+```
+
+
+

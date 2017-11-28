@@ -11,7 +11,7 @@
 
 <meta name="author" content="Replicated by Jaclyn Schwartz; contact: jschwar2@stanford.edu" />
 
-<meta name="date" content="2017-11-26" />
+<meta name="date" content="2017-11-27" />
 
 <title>Replication of You call it Self-Exhuberance; I call it Bragging: Miscalibrated Prediction of Emotional Responses to Self-Promotion (Study 2) by Scopelliti, Loewenstein, Vosgerau (2015, Psychological Science)</title>
 
@@ -223,7 +223,7 @@ div.tocify {
 
 <h1 class="title toc-ignore">Replication of You call it ‘Self-Exhuberance’; I call it ‘Bragging’: Miscalibrated Prediction of Emotional Responses to Self-Promotion (Study 2) by Scopelliti, Loewenstein, Vosgerau (2015, <em>Psychological Science</em>)</h1>
 <h4 class="author"><em>Replicated by Jaclyn Schwartz; contact: <a href="mailto:jschwar2@stanford.edu">jschwar2@stanford.edu</a></em></h4>
-<h4 class="date"><em>November 26, 2017</em></h4>
+<h4 class="date"><em>November 27, 2017</em></h4>
 
 </div>
 
@@ -261,7 +261,7 @@ div.tocify {
 </div>
 <div id="analysis-plan" class="section level3">
 <h3>Analysis Plan</h3>
-<p>This experiment is a 2 (reporter: self-promoter vs. recipient) x 2 (emotions: emotions experienced by self vs. predicted emotions) mixed design because participants are randomized to <em>either</em> the self-promoter or recipient-of-self-promotion conditions (between-subjects). The authors performed a 2-way mixed ANOVA on ratings of the 7 emotional reactions. The <em>between-subjects</em> factor is condition (SP vs. R of SP), and the <em>within-subjects</em> factor is emotion. Post-hoc F-tests were performed to examine which emotions were over- or under-estimated. The topics of self-promotion (i.e., the descriptions of bragging) are categorized by 2 research assistants (RAs) only to be included as covariates. The 2 RAs independently categorized the descriptions into predefined categories of (a) achievements; (b) individual traits and skills; (c) money, possessions, power, and status; (d) family and relationships; and (e) luck. These covariates are dummy coded, and “luck serves as the baseline topic.” Data will be excluded if participants claimed to have never bragged or if the situation described is not clearly bragging as defined by the coders. Demographic variables of gender and age seem to only be reported as sample descriptives in the original article, so this replication will follow that strategy.</p>
+<p>This experiment is a two-cell between-subjects design where participants are randomized to <em>either</em> the self-promoter or recipient-of-self-promotion conditions (between-subjects). The authors performed a 2-way mixed ANOVA on ratings of the 7 emotional reactions. The <em>between-subjects</em> factor is condition (SP vs. R of SP), and the <em>within-subjects</em> factor is emotion. Post-hoc F-tests were performed to examine which emotions were over- or under-estimated. The topics of self-promotion (i.e., the descriptions of bragging) are categorized by 2 research assistants (RAs) only to be included as covariates. The 2 RAs independently categorized the descriptions into predefined categories of (a) achievements; (b) individual traits and skills; (c) money, possessions, power, and status; (d) family and relationships; and (e) luck. These covariates are dummy coded, and “luck serves as the baseline topic.” Data will be excluded if participants claimed to have never bragged or if the situation described is not clearly bragging as defined by the coders. Demographic variables of gender and age seem to only be reported as sample descriptives in the original article, so this replication will follow that strategy.</p>
 <p><strong>Key analysis of interest: A 2-way mixed ANOVA on ratings of the 7 emotional reactions, where emotion is the within-subjects factor, and condition is the between-subjects factor.</strong> If the interaction is significant, I will conduct post-hoc F tests to examine which emotions are over- or under-estimated.</p>
 </div>
 <div id="differences-from-original-study" class="section level3">
@@ -384,35 +384,6 @@ knitr::kable(broom::tidy(mainInt))</code></pre>
 </tr>
 </tbody>
 </table>
-<pre class="r"><code># Saved parameters for the Condition main effect
-Cond_Fstat &lt;- Cond_aov_sum[[1]][[1]][[1,&quot;F value&quot;]] # 0.125
-Cond_Fstat_r &lt;- round(Cond_Fstat, digits = 2) # 0.12
-Cond_pval &lt;- Cond_aov_sum[[1]][[1]][[1,&quot;Pr(&gt;F)&quot;]] # 0.7836531
-Cond_pval_r &lt;- round(Cond_pval, digits = 3) # 0.784
-Cond_num_df &lt;- Cond_aov_sum[[1]][[1]][[1, &quot;Df&quot;]] # 1
-Cond_den_df &lt;- Cond_aov_sum[[1]][[1]][[3, &quot;Df&quot;]] # 1
-
-# Saved parameters for the Emotion main effect
-Emo_Fstat &lt;- Emo_aov_noCov_sum[[2]][[1]][[1,&quot;F value&quot;]] # 3.198347
-Emo_Fstat_r &lt;- round(Emo_Fstat, digits = 2) # 3.2
-Emo_pval &lt;- Emo_aov_noCov_sum[[2]][[1]][[1,&quot;Pr(&gt;F)&quot;]] # 0.02568918
-Emo_pval_r &lt;- round(Emo_pval, digits = 3) # 0.026
-Emo_num_df &lt;- Emo_aov_noCov_sum[[2]][[1]][[1, &quot;Df&quot;]] # 6
-Emo_den_df &lt;- Emo_aov_noCov_sum[[2]][[1]][[2, &quot;Df&quot;]] # 18
-
-# Saved parameters for the interaction
-Fstat &lt;- mainInt_sum[[2]][[1]][[2,&quot;F value&quot;]] # 1.61194
-Fstat_r &lt;- round(Fstat, digits = 2) # 1.612
-pval &lt;- mainInt_sum[[2]][[1]][[2,&quot;Pr(&gt;F)&quot;]] # 0.2265528
-pval_r &lt;- round(pval, digits = 3) # 0.227
-num_df &lt;- mainInt_sum[[2]][[1]][[2, &quot;Df&quot;]] # 6
-den_df &lt;- mainInt_sum[[2]][[1]][[3, &quot;Df&quot;]] # 12
-
-# Calculating partial eta squared
-SSn &lt;- mainInt_sum[[2]][[1]][[2,&quot;Sum Sq&quot;]] # 15.42857
-SSd &lt;- mainInt_sum[[2]][[1]][[3,&quot;Sum Sq&quot;]] # 19.14286
-part_eta &lt;- SSn/(SSn + SSd) # 0.446281
-part_eta_r &lt;- round(part_eta, digits = 2) # 0.45</code></pre>
 <p>As per the authors’ analyses, I estimated the main effect of <em>Condition</em> with the inclusion of topic covariates, I estimated the main effect of <em>Emotion</em> without topic covariates, and I estimated the interaction with the inclusion of topic covariates. There is a main effect of <em>Emotion</em>, <em>F</em>(6,18) = 3.2, <em>p</em> = 0.026 but no main effect of <em>Condition</em>, <em>F</em>(1,1) = 0.12, <em>p</em> = 0.784, which is consistent with the authors’ findings. However, the interaction statistic that I aimed to replicate is not significant, <em>F</em>(6,12) = 1.61, <em>p</em> = 0.227, <span class="math inline">\(\eta_{p}^{2}\)</span> = 0.45. I therefore did not conduct post-hoc tests since the interaction wasn’t significant, which will impact the interpretation of any simple effects. I did not include age or gender in my models because the original paper does not do so.</p>
 </div>
 <div id="graphing-the-interaction" class="section level4">
@@ -559,35 +530,6 @@ knitr::kable(broom::tidy(Study2mainInt_aov))</code></pre>
 </tr>
 </tbody>
 </table>
-<pre class="r"><code># Saved parameters for the Condition main effect
-Cond_Fstat_study2 &lt;- Study2Cond_aov_sum [[1]][[1]][[1,&quot;F value&quot;]] # 2.844642
-Cond_Fstat_r_study2 &lt;- round(Cond_Fstat_study2, digits = 2) # 2.84
-Cond_pval_study2 &lt;- Study2Cond_aov_sum[[1]][[1]][[1,&quot;Pr(&gt;F)&quot;]] # 0.09384429
-Cond_pval_r_study2 &lt;- round(Cond_pval_study2, digits = 3) # 0.094
-Cond_num_df_study2 &lt;- Study2Cond_aov_sum[[1]][[1]][[1, &quot;Df&quot;]] # 1
-Cond_den_df_study2 &lt;- Study2Cond_aov_sum[[1]][[1]][[3, &quot;Df&quot;]] # 1
-
-# Saved parameters for the Emotion main effect
-Emo_Fstat_study2  &lt;- Emo_aov_noCov_sum[[2]][[1]][[1,&quot;F value&quot;]] # 20.43889
-Emo_Fstat_r_study2 &lt;- round(Emo_Fstat_study2, digits = 2) # 20.44
-Emo_pval_study2 &lt;- Emo_aov_noCov_sum[[2]][[1]][[1,&quot;Pr(&gt;F)&quot;]] # 1.641914e-22
-Emo_pval_r_study2 &lt;- round(Emo_pval_study2, digits = 3) # 0
-Emo_num_df_study2 &lt;- Emo_aov_noCov_sum[[2]][[1]][[1, &quot;Df&quot;]] # 6
-Emo_den_df_study2 &lt;- Emo_aov_noCov_sum[[2]][[1]][[2, &quot;Df&quot;]] # 900
-
-# Saved parameters for the interaction
-Fstat_study2 &lt;- Study2mainInt_aov_sum[[2]][[1]][[2,&quot;F value&quot;]] # 10.7547
-Fstat_r_study2 &lt;- round(Fstat_study2, digits = 2) # 10.75
-pval_study2 &lt;- Study2mainInt_aov_sum[[2]][[1]][[2,&quot;Pr(&gt;F)&quot;]] # 1.432555e-11
-pval_r_study2  &lt;- round(pval_study2, digits = 3) # 0
-num_df_study2 &lt;- Study2mainInt_aov_sum[[2]][[1]][[2, &quot;Df&quot;]] # 6
-den_df_study2 &lt;- Study2mainInt_aov_sum[[2]][[1]][[3, &quot;Df&quot;]] # 894
-
-# Calculating partial eta squared
-SSn_study2 &lt;- Study2mainInt_aov_sum[[2]][[1]][[2,&quot;Sum Sq&quot;]] # 199.4427
-SSd_study2 &lt;- Study2mainInt_aov_sum[[2]][[1]][[3,&quot;Sum Sq&quot;]] # 2763.161
-part_eta_study2 &lt;- SSn_study2/(SSn_study2 + SSd_study2) # 0.06732008
-part_eta_r_study2 &lt;- round(part_eta_study2, digits = 2) # 0.07</code></pre>
 <p>In testing my code on the authors’ data, there is a main effect of <em>Emotion</em>, <em>F</em>(6,900) = 20.44, <em>p</em>&lt;.001, but no main effect of <em>Condition</em>, <em>F</em>(1,1) = 2.84, <em>p</em> = 0.094. The interaction between <em>Emotion</em> and <em>Condition</em> is also significant, <em>F</em>(6,894) = 10.75, <em>p</em>&lt;.001, <span class="math inline">\(\eta_{p}^{2}\)</span> = 0.07. These statistics do not exactly replicate the authors’ reporting, but it is very similar, and the conclusions drawn would be the same. For example, for the main interaction, the authors report F(6,912)=10.90, p&lt;.001, partial eta = .07. However, my code to replicate yields, F(6,894)= 10.75, p&lt;.001, partial eta = .07. So, only the F statistic and the denominator degrees of freedom are slightly off from what the authors report.</p>
 </div>
 <div id="if-gathering-the-covariates-into-long-format-which-i-commented-out" class="section level5">

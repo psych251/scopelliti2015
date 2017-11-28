@@ -1,0 +1,10 @@
+name: Publish Document
+title:
+username:
+account: rpubs
+server: rpubs.com
+hostUrl: rpubs.com
+appId: https://api.rpubs.com/api/v1/document/334196/66554b87add64ac79cfa6d798b235d1e
+bundleId: https://api.rpubs.com/api/v1/document/334196/66554b87add64ac79cfa6d798b235d1e
+url: http://rpubs.com/jackie_schwartz/334196
+when: 1511833344.76873

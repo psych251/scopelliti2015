@@ -40,7 +40,7 @@ Participants completed a short survey on Amazon Mechanical Turk (MTurk). Partici
 
 ###Analysis Plan
 
-This experiment is a 2 (reporter: self-promoter vs. recipient) x 2 (emotions: emotions experienced by self vs. predicted emotions) mixed design because participants are randomized to *either* the self-promoter or recipient-of-self-promotion conditions (between-subjects). The authors performed a 2-way mixed ANOVA on ratings of the 7 emotional reactions. The *between-subjects* factor is condition (SP vs. R of SP), and the *within-subjects* factor is emotion. Post-hoc F-tests were performed to examine which emotions were over- or under-estimated. The topics of self-promotion (i.e., the descriptions of bragging) are categorized by 2 research assistants (RAs) only to be included as covariates. The 2 RAs independently categorized the descriptions into predefined categories of (a) achievements; (b) individual traits and skills; (c) money, possessions, power, and status; (d) family and relationships; and (e) luck. These covariates are dummy coded, and "luck serves as the baseline topic." Data will be excluded if participants claimed to have never bragged or if the situation described is not clearly bragging as defined by the coders. Demographic variables of gender and age seem to only be reported as sample descriptives in the original article, so this replication will follow that strategy.
+This experiment is a two-cell between-subjects design where participants are randomized to *either* the self-promoter or recipient-of-self-promotion conditions (between-subjects). The authors performed a 2-way mixed ANOVA on ratings of the 7 emotional reactions. The *between-subjects* factor is condition (SP vs. R of SP), and the *within-subjects* factor is emotion. Post-hoc F-tests were performed to examine which emotions were over- or under-estimated. The topics of self-promotion (i.e., the descriptions of bragging) are categorized by 2 research assistants (RAs) only to be included as covariates. The 2 RAs independently categorized the descriptions into predefined categories of (a) achievements; (b) individual traits and skills; (c) money, possessions, power, and status; (d) family and relationships; and (e) luck. These covariates are dummy coded, and "luck serves as the baseline topic." Data will be excluded if participants claimed to have never bragged or if the situation described is not clearly bragging as defined by the coders. Demographic variables of gender and age seem to only be reported as sample descriptives in the original article, so this replication will follow that strategy.
 
 **Key analysis of interest: A 2-way mixed ANOVA on ratings of the 7 emotional reactions, where emotion is the within-subjects factor, and condition is the between-subjects factor.**  If the interaction is significant, I will conduct post-hoc F tests to examine which emotions are over- or under-estimated.
 
@@ -185,7 +185,9 @@ print(Emo_aov_noCov_sum)
 mainInt <- aov(Rating~ (Cond*Emo) + ach_dummy + poss_money_status_power_dummy + fam_rel_dummy + Error(ResponseId/(Emo)), data = PilotQ_long)
 mainInt_sum <- summary(mainInt)
 knitr::kable(broom::tidy(mainInt))
+```
 
+```{r, include=FALSE}
 # Saved parameters for the Condition main effect
 Cond_Fstat <- Cond_aov_sum[[1]][[1]][[1,"F value"]] # 0.125
 Cond_Fstat_r <- round(Cond_Fstat, digits = 2) # 0.12
@@ -215,7 +217,6 @@ SSn <- mainInt_sum[[2]][[1]][[2,"Sum Sq"]] # 15.42857
 SSd <- mainInt_sum[[2]][[1]][[3,"Sum Sq"]] # 19.14286
 part_eta <- SSn/(SSn + SSd) # 0.446281
 part_eta_r <- round(part_eta, digits = 2) # 0.45
-
 ```
 
 As per the authors' analyses, I estimated the main effect of *Condition* with the inclusion of topic covariates, I estimated the main effect of *Emotion* without topic covariates, and I estimated the interaction with the inclusion of topic covariates. There is a main effect of *Emotion*, *F*(`r Emo_num_df`,`r Emo_den_df`) = `r Emo_Fstat_r`, *p* = `r Emo_pval_r` but no main effect of *Condition*, *F*(`r Cond_num_df`,`r Cond_den_df`) = `r Cond_Fstat_r`, *p* = `r Cond_pval_r`, which is consistent with the authors' findings. However, the interaction statistic that I aimed to replicate is not significant, *F*(`r num_df`,`r den_df`) = `r Fstat_r`, *p* = `r pval_r`, $\eta_{p}^{2}$ = `r part_eta_r`. I therefore did not conduct post-hoc tests since the interaction wasn't significant, which will impact the interpretation of any simple effects. I did not include age or gender in my models because the original paper does not do so.
@@ -298,7 +299,9 @@ print(Emo_aov_noCov_sum)
 Study2mainInt_aov <- aov(Rating ~ (reporter*Emotion) + ach_dummy + ind_skill_d + poss_money_status_power_dummy + fam_rel_dummy + luck_dummy + Error(subj/(Emotion)), data = study2_long)
 Study2mainInt_aov_sum <- summary(Study2mainInt_aov)
 knitr::kable(broom::tidy(Study2mainInt_aov))
+```
 
+```{r, include=FALSE}
 # Saved parameters for the Condition main effect
 Cond_Fstat_study2 <- Study2Cond_aov_sum [[1]][[1]][[1,"F value"]] # 2.844642
 Cond_Fstat_r_study2 <- round(Cond_Fstat_study2, digits = 2) # 2.84
@@ -329,6 +332,7 @@ SSd_study2 <- Study2mainInt_aov_sum[[2]][[1]][[3,"Sum Sq"]] # 2763.161
 part_eta_study2 <- SSn_study2/(SSn_study2 + SSd_study2) # 0.06732008
 part_eta_r_study2 <- round(part_eta_study2, digits = 2) # 0.07
 ```
+
 In testing my code on the authors' data, there is a main effect of *Emotion*, *F*(`r Emo_num_df_study2`,`r Emo_den_df_study2`) = `r Emo_Fstat_r_study2`, *p*<.001, but no main effect of *Condition*, *F*(`r Cond_num_df_study2`,`r Cond_den_df_study2`) = `r Cond_Fstat_r_study2`, *p* = `r Cond_pval_r_study2`. The interaction between *Emotion* and *Condition* is also significant, *F*(`r num_df_study2`,`r den_df_study2`) = `r Fstat_r_study2`, *p*<.001, $\eta_{p}^{2}$ = `r part_eta_r_study2`. These statistics do not exactly replicate the authors’ reporting, but it is very similar, and the conclusions drawn would be the same. For example, for the main interaction, the authors report F(6,912)=10.90, p<.001, partial eta = .07. However, my code to replicate yields, F(6,894)= 10.75, p<.001, partial eta = .07. So, only the F statistic and the denominator degrees of freedom are slightly off from what the authors report.
 
 #####If gathering the covariates into long format, which I commented out

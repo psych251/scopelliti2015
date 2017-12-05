@@ -1,0 +1,318 @@
+---
+title: "Replication of You call it 'Self-Exhuberance'; I call it 'Bragging': Miscalibrated Prediction of Emotional Responses to Self-Promotion (Study 2) by Scopelliti, Loewenstein, Vosgerau (2015, *Psychological Science*)"
+author: "Replicated by Jaclyn Schwartz; contact: jschwar2@stanford.edu"
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+output:
+  html_document:
+    toc: yes
+    toc_depth: 3
+    toc_float:
+      collapsed: false
+---
+
+<!-- Replication reports should all use this template to standardize reporting across projects.  These reports will be public supplementary materials that accompany the summary report(s) of the aggregate results. -->
+
+##Introduction
+
+>Scopelliti et al., 2015 explored how self-promotion (i.e., communicating one’s positive traits) can lead to contradicting emotional perspectives. The self-promoter may perceive that the recipient feels more positive emotions and less negative emotions about the promoter’s behavior than the recipient’s true emotional reaction. These "failures of emotional perspective taking" can have negative consequences, where recipients may see the self-promoters as bragging. The authors argued that "people tend to underestimate differences between their own and others' emotional reactions" by using their own emotions as "anchors to estimate" their recipient's emotions. They hypothesized that "self-promoters will overestimate the extent to which their behavior elicits positive emotional reactions in others, and underestimate the extent to which their behavior elicits negative emotional reactions."  
+
+##Methods
+
+###Power Analysis
+
+I used G*Power 3.1 to conduct my a priori power analysis to plan the sample size. Specifically, I used a repeated-measures ANOVA for the main within-between (emotion x condition) interaction to plan my sample size since the authors used a 2-way mixed ANOVA, with 2 (between) groups and 7 (within) measurements to calculate their effects. The authors' reported effect size was $\eta_{p}^{2}$ = .07, which corresponds to effect size of f = 0.274. I set $\alpha$ = .05. In order to achieve 80% power, the yielded sample size was very small (N=16) either because the authors over-powered their sample number or the analysis yielded a huge effect. Therefore, I set the power to = .95 to increase the proposed sample size. Thus, my determined sample size is 50 to achieve 95% power. 
+
+![G*power screenshot to determine sample size](PwrAnalysis.png)
+
+###Procedure	
+
+>Participants completed a short survey on Amazon Mechanical Turk (MTurk). Participants were randomly assigned to one of two conditions: the self-promotion condition or the recipient-of-self-promotion condition.
+>"Sample size was set to a minimum of 75 participants per condition, and the data were analyzed only after data collection had been completed. 154 Amazon Mechanical Turk workers accessed and completed a short study on personality and received $0.50 as compensation. As in Experiment 1, participants described an instance of having engaged in self-promotion or having been the recipient of someone else's self-promotion. Next, participants in the self-promotion condition were asked to indicate the extent to which their counterpart had felt happy for, proud of, annoyed by, jealous of, angry at, upset by, and inferior to them, whereas participants in the recipient-of-self-promotion condition were asked to rate their own level of these experienced feelings." 
+>The between-subjects factor is "reporter" (either self-promoter **or** recipient). The emotions are considered a within-subjects factor only because participants in both conditions rate the same emotions. "All emotions were rated on 7-point scales from *not at all* (1) to *very much* (7)." 
+The replication will instead recruit 25 participants per condition based on the power analysis, and pilot data has been collected and analyzed. My pilot data suggest that the survey takes approximately 4-5 minutes to complete, so participants will receive 60 cents as compensation.
+
+###Analysis Plan
+
+>This experiment is a "two-cell between-subjects design" where participants are randomized to *either* the self-promoter or recipient-of-self-promotion conditions (between-subjects).
+"The authors performed a 2-way mixed ANOVA on ratings of the 7 emotional reactions." The *between-subjects* factor is condition (SP vs. R of SP), and the *within-subjects* factor is emotion. Post-hoc F-tests were performed to examine which emotions were over- or under-estimated. The topics of self-promotion (i.e., the descriptions of bragging) are categorized by 2 research assistants (RAs) only to be included as covariates. "The 2 RAs independently categorized the descriptions into predefined categories of (a) achievements; (b) individual traits and skills; (c) money, possessions, power, and status; (d) family and relationships; and (e) luck." These covariates are dummy coded, and "luck serves as the baseline topic." "Disagreements are resolved through discussion." Data will be excluded if participants claimed to have never bragged or if the situation described is not clearly bragging as defined by the coders. Demographic variables of gender and age seem to only be reported as sample descriptives in the original article, so this replication will follow that strategy. The main statistic the authors report is the condition x emotion interaction, *F*(6,912)=10.90, *p*<.001, $\eta_{p}^{2}$ = .07. The replication will be considered successful if the interaction is statistically significant. 
+
+**Key analysis of interest: A "2-way mixed ANOVA on ratings of the 7 emotional reactions, where emotion is the within-subjects factor, and condition is the between-subjects factor."** As per the authors' analyses, I will estimate the main effect of *Condition* with the inclusion of topic covariates, I will estimate the main effect of *Emotion* without topic covariates, and I will estimate the interaction with the inclusion of topic covariates. If the interaction is significant, I will conduct post-hoc F tests to examine which emotions are over- or under-estimated.
+
+###Differences from Original Study
+
+The main difference planned sample size. Another difference is that I will be one of the 2 "RAs" who code the covariate topics. For analysis, I will include dummy coded topic covariates as separate covariates, and not as levels of one "Topic" covariate for ease of gathering the "Emotion" ratings into long format. 
+
+<!-- ### Methods Addendum (Post Data Collection) (comment this section out) -->
+
+<!-- You can comment this section out prior to final report with data collection. -->
+
+<!-- #### Actual Sample -->
+<!--   Sample size, demographics, data exclusions based on rules spelled out in analysis plan -->
+
+<!-- #### Differences from pre-data collection methods plan -->
+<!--   Any differences from what was described as the original plan, or “none”. -->
+
+
+##Results
+
+The main statistic the authors report is the condition x emotion interaction, *F*(6,912)=10.90, *p*<.001, $\eta_{p}^{2}$ = .07. The main aim of the replication is to replicate this interaction. If significant, I will aim to replicate the post-hoc difference in means for each emotion to show that people in the self-promotion condition "overestimated the extent to which recipients felt happy for them (*M*=4.88, *SD*=1.78, vs. *M*=3.70, *SD*=1.91), *F*(1,145)=10.85, *p*=.001, $\eta_{p}^{2}$ = .07, and proud of them (*M*=4.33, *SD*=1.81, vs. *M*=3.08, *SD*=1.77), *F*(1,145)=12.12, *p*<.001, $\eta_{p}^{2}$ = .08", and also "underestimated the extent to which recipients felt annoyed (*M*=3.54, *SD*=1.94, vs. *M*=4.82, *SD*=2.15), *F*(1,145)=11.56, *p*=.001, $\eta_{p}^{2}$ = .07."
+
+###Data preparation
+
+Data preparation following the analysis plan. Here is the link to the replication Qualtrics survey: https://stanforduniversity.qualtrics.com/jfe/form/SV_4O72UJKN7nEkE73
+
+```{r include=F}
+###Data Preparation
+####Load Relevant Libraries and Functions
+library(lme4)
+library(nlme)
+library(reshape2)
+library(ggplot2)
+library(Matrix)
+library(base)
+library(lmerTest)
+library(psych)
+library(car)
+library(effects)
+library(lm.beta)
+library(tidyverse)
+library(ggthemes) 
+library(ez)
+library(broom)
+library(knitr)
+knitr::opts_chunk$set(error = TRUE)
+####Import data: Reading in csv from Qualtrics
+PilotA <- read_csv("Scopelliti2015_November 15, 2017_18.54.csv")
+PilotB <- read_csv("Scopelliti2015_November 30, 2017_20.20.csv")
+head(PilotA)
+head(PilotB)
+####Data exclusion / filtering
+#####Deleting row 2 bc not informative
+PilotA <- PilotA[-(1:2), ]
+PilotB <- PilotB[-(1:2), ]
+####Merging 2 dataframes of pilot data
+PilotC <- bind_rows(PilotA, PilotB)
+#####Keeping only necessary Columns (selecting only the participant ID, Input condition, Answer items, Demo)
+PilotC <- PilotC %>%
+  select(ResponseId, Condition.RSP.desc, Cond_RSP_happy, Cond_RSP_proud, Cond_RSP_angry, Cond_RSP_annoyed, Cond_RSP_inferior, Cond_RSP_jealous, Cond_RSP_upset, Condition.SP.desc, Cond_SP_happy, Cond_SP_proud, Cond_SP_angry, Cond_SP_annoyed, Cond_SP_inferior, Cond_SP_jealous, Cond_SP_upset, Gender, Age) 
+PilotC$Condition <- c(0,1,0,1,0,1,1,0) # RSP = 0, SP = 1
+#####Adding Covariate columns (a) achievements; (b) individual traits and skills; (c) money, possessions, power, and status; (d) family and relationships; and (e) luck. 
+PilotC$ach_dummy <- c(1,1,0,0,0,1,0,0)
+PilotC$ind_skill_dummy <- c(0,0,0,0,0,0,1,1)
+PilotC$poss_money_status_power_dummy <- c(0,0,1,0,0,0,0,0)
+PilotC$fam_rel_dummy <- c(0,0,0,0,1,0,0,0)
+PilotC$luck_dummy <- c(0,0,0,1,0,0,0,0)
+#####Renaming my variables
+PilotC <- PilotC %>%
+  rename(happy_RSP = Cond_RSP_happy) %>%
+  rename(proud_RSP = Cond_RSP_proud) %>%
+  rename(angry_RSP = Cond_RSP_angry) %>%
+  rename(annoyed_RSP = Cond_RSP_annoyed) %>%
+  rename(inferior_RSP = Cond_RSP_inferior) %>%
+  rename(jealous_RSP = Cond_RSP_jealous) %>%
+  rename(upset_RSP = Cond_RSP_upset) %>%
+  rename(happy_SP = Cond_SP_happy) %>%
+  rename(proud_SP = Cond_SP_proud) %>%
+  rename(angry_SP = Cond_SP_angry) %>%
+  rename(annoyed_SP = Cond_SP_annoyed) %>%
+  rename(inferior_SP = Cond_SP_inferior) %>%
+  rename(jealous_SP = Cond_SP_jealous) %>%
+  rename(upset_SP = Cond_SP_upset) 
+####Prepare data for analysis - create columns etc.
+PilotC_long <- PilotC %>%
+  gather(Emotion, Rating, 
+        happy_SP, proud_SP, angry_SP, annoyed_SP, inferior_SP, jealous_SP, upset_SP, 
+        happy_RSP, proud_RSP, angry_RSP, annoyed_RSP, inferior_RSP, jealous_RSP, upset_RSP) %>%
+  separate(Emotion, c("Emo", "Cond"), "_") 
+PilotC_long <- gather(PilotC_long, condition , description, Condition.RSP.desc, Condition.SP.desc)
+PilotC_long
+PilotC_long <- PilotC_long[order(PilotC_long$ResponseId),]
+PilotC_long <- PilotC_long %>%
+  filter(!is.na(description))
+PilotC_long <- PilotC_long %>%
+  filter(!is.na(Rating))
+head(PilotC_long)
+#####Making sure variables are set to correct data class
+######Converting rating, my DV, to numeric data class
+PilotC_long$Rating <- as.numeric(PilotC_long$Rating)
+######Converting Id, discrete emotions, condition, and covariates into factors
+PilotC_long$ResponseId <- as.factor(PilotC_long$ResponseId)
+PilotC_long$Emo <- as.factor(PilotC_long$Emo)
+PilotC_long$Cond <- as.factor(PilotC_long$Cond)
+PilotC_long$ach_dummy <- as.factor(PilotC_long$ach_dummy)
+PilotC_long$ind_skill_dummy <- as.factor(PilotC_long$ind_skill_dummy)
+PilotC_long$poss_money_status_power_dummy <- as.factor(PilotC_long$poss_money_status_power_dummy)
+PilotC_long$fam_rel_dummy <- as.factor(PilotC_long$fam_rel_dummy) 
+PilotC_long$luck_dummy <- as.factor(PilotC_long$luck_dummy) 
+```
+
+### Confirmatory analysis
+
+These confirmatory and exploratory analyses are currently run on pilot data but will be substituted out with final data collection after running the study.
+
+#### 2-way mixed ANOVA
+```{r}
+# With Covariates (The Between-subjects factor was estimated with inclusion of the topic covariates)
+Cond_aov <- aov(Rating ~ Cond + ach_dummy + poss_money_status_power_dummy + ind_skill_dummy + fam_rel_dummy + luck_dummy + Error(ResponseId), data = PilotC_long)
+Cond_aov_sum <- summary(Cond_aov) 
+print(Cond_aov_sum)
+
+# Without Covariates (The Within-subjects factor estimated without inclusion of the topic covariates)
+Emo_aov_noCov <- aov(Rating ~ Emo + Error(ResponseId/(Emo)), data = PilotC_long)
+Emo_aov_noCov_sum <- summary(Emo_aov_noCov)
+print(Emo_aov_noCov_sum)
+
+# With Covariates (The interaction was estimated with topic covariates)
+mainInt <- aov(Rating ~ Cond*Emo + ach_dummy + poss_money_status_power_dummy + ind_skill_dummy + fam_rel_dummy + luck_dummy + Error(ResponseId/(Emo)), data = PilotC_long)
+mainInt_sum <- summary(mainInt)
+print(mainInt_sum)
+knitr::kable(broom::tidy(mainInt))
+```
+
+```{r, include=FALSE}
+# Saved parameters for the Condition main effect
+Cond_Fstat <- Cond_aov_sum[[1]][[1]][[1,"F value"]] # 0.2086093
+Cond_Fstat_r <- round(Cond_Fstat, digits = 2) # 0.21 
+Cond_pval <- Cond_aov_sum[[1]][[1]][[1,"Pr(>F)"]] # 0.6926683
+Cond_pval_r <- round(Cond_pval, digits = 3) #  0.693
+Cond_num_df <- Cond_aov_sum[[1]][[1]][[1, "Df"]] # 1
+Cond_den_df <- Cond_aov_sum[[1]][[1]][[6, "Df"]] # 2
+
+# Saved parameters for the Emotion main effect
+Emo_Fstat <- Emo_aov_noCov_sum[[2]][[1]][[1,"F value"]] # 5.79506
+Emo_Fstat_r <- round(Emo_Fstat, digits = 2) # 5.8
+Emo_pval <- Emo_aov_noCov_sum[[2]][[1]][[1,"Pr(>F)"]] # 0.0001827351
+Emo_pval_r <- round(Emo_pval, digits = 3) # 0
+Emo_num_df <- Emo_aov_noCov_sum[[2]][[1]][[1, "Df"]] # 6
+Emo_den_df <- Emo_aov_noCov_sum[[2]][[1]][[2, "Df"]] # 42
+
+# Saved parameters for the interaction
+Fstat <- mainInt_sum[[2]][[1]][[2,"F value"]] # 3.038372
+Fstat_r <- round(Fstat, digits = 2) # 3.04
+pval <- mainInt_sum[[2]][[1]][[2,"Pr(>F)"]] # 0.01653068
+pval_r <- round(pval, digits = 3) # 0.017
+num_df <- mainInt_sum[[2]][[1]][[2, "Df"]] # 6
+den_df <- mainInt_sum[[2]][[1]][[3, "Df"]] # 36
+
+# Calculating partial eta squared
+SSn <- mainInt_sum[[2]][[1]][[2,"Sum Sq"]] # 31.10714
+SSd <- mainInt_sum[[2]][[1]][[3,"Sum Sq"]] # 61.42857
+part_eta <- SSn/(SSn + SSd) # 0.3361636
+part_eta_r <- round(part_eta, digits = 2) # 0.34
+```
+
+As per the authors' analyses, I will estimate the main effect of *Condition* with the inclusion of topic covariates, I will estimate the main effect of *Emotion* without topic covariates, and I will estimate the interaction with the inclusion of topic covariates. With this pilot, there is a main effect of *Emotion*, *F*(`r Emo_num_df`,`r Emo_den_df`) = `r Emo_Fstat_r`, *p*<.001, but no main effect of *Condition*, *F*(`r Cond_num_df`,`r Cond_den_df`) = `r Cond_Fstat_r`, *p* = `r Cond_pval_r`. The replication interaction statistic is *F*(`r num_df`,`r den_df`) = `r Fstat_r`, *p* = `r pval_r`, $\eta_{p}^{2}$ = `r part_eta_r`. If the interaction for real data collection is significant, I will conduct simple effect F tests, which is in my exploratory code. I did not include age or gender in my models because the original paper does not do so.
+
+#### Graphing the Results
+```{r, include=FALSE}
+require(plyr)
+require(reshape)
+```
+
+```{r}
+# Bargraph with SE bars
+meanAndSem=function(x) c(mn = mean(x,na.rm=TRUE), se = sd(x,na.rm=T)/sqrt((sum(as.double(!is.na(x))))), len=sum(as.double(!is.na(x))))
+Fig1 = ddply(PilotC_long, .(Cond,Emo), summarize,mn = meanAndSem(Rating)[1], se = meanAndSem(Rating)[2])
+Fig1 = ddply(PilotC_long, .(Cond,Emo), summarize, mn = meanAndSem(Rating)[1], se = meanAndSem(Rating)[2])
+limits = aes(ymax = mn + se, ymin=mn - se)
+```
+
+```{r}
+Fig1_plot = ggplot(Fig1, aes(x = factor(Emo), y = mn, fill = factor(Cond)))+geom_bar(width=.9, stat = 'identity', position=position_dodge(.95),size=1.5,alpha = 0.7)+labs(title = "Miscalibrated Predictions of Responses to Self-Promotion", y="Extent of Emotion",x="Emotion")+geom_errorbar(limits,color = 'black',position=position_dodge(.95),width=0.25) + labs(color = "Group") + theme(axis.title=element_text(face="bold",size="14", color="black")) + theme(title = element_text(face = "bold")) +  scale_fill_discrete("Group", labels = c("Experienced by Recipient", "Predicted by Self-Promoter"))
+print(Fig1_plot)
+```
+
+This replication graph shows "self-Promoters' predictions of recipients' experienced emotions and recipients' ratings of their actual experienced emotions. Error bars represent +/-1 SEM." 
+
+###Exploratory analyses
+
+If the interaction after actual data collection is significant, here is the code I would use to conduct post-hoc F tests.
+
+```{r}
+# 0 = RSP, 1 = SP
+SPcond <- PilotC[which(PilotC$Condition == '1'),]
+RSPcond <- PilotC[which(PilotC$Condition == '0'),]
+happy <- PilotC_long[which(PilotC_long$Emo == 'happy'),]
+proud <- PilotC_long[which(PilotC_long$Emo == 'proud'),]
+annoyed <- PilotC_long[which(PilotC_long$Emo == 'annoyed'),]
+jealous <- PilotC_long[which(PilotC_long$Emo == 'jealous'),]
+upset <- PilotC_long[which(PilotC_long$Emo == 'upset'),]
+angry <- PilotC_long[which(PilotC_long$Emo == 'angry'),]
+inferior <- PilotC_long[which(PilotC_long$Emo == 'inferior'),]
+
+SPcond$happy_SP <- as.numeric(SPcond$happy_SP)
+SPcond$proud_SP <- as.numeric(SPcond$proud_SP)
+SPcond$annoyed_SP <- as.numeric(SPcond$annoyed_SP)
+SPcond$jealous_SP <- as.numeric(SPcond$jealous_SP)
+SPcond$upset_SP <- as.numeric(SPcond$upset_SP)
+SPcond$angry_SP <- as.numeric(SPcond$angry_SP)
+SPcond$inferior_SP <- as.numeric(SPcond$inferior_SP)
+
+RSPcond$happy_RSP <- as.numeric(RSPcond$happy_RSP)
+RSPcond$proud_RSP <- as.numeric(RSPcond$proud_RSP)
+RSPcond$annoyed_RSP <- as.numeric(RSPcond$annoyed_RSP)
+RSPcond$jealous_RSP <- as.numeric(RSPcond$jealous_RSP)
+RSPcond$upset_RSP <- as.numeric(RSPcond$upset_RSP)
+RSPcond$angry_RSP <- as.numeric(RSPcond$angry_RSP)
+RSPcond$inferior_RSP <- as.numeric(RSPcond$inferior_RSP)
+
+# happy
+mean(SPcond$happy_SP) 
+sd(SPcond$happy_SP) 
+mean(RSPcond$happy_RSP) 
+sd(RSPcond$happy_RSP) 
+summary(aov(Rating ~ Cond + ach_dummy + ind_skill_dummy + poss_money_status_power_dummy + fam_rel_dummy + luck_dummy, data = happy))
+
+# proud
+mean(SPcond$proud_SP) 
+sd(SPcond$proud_SP) 
+mean(RSPcond$proud_RSP) 
+sd(RSPcond$proud_RSP) 
+summary(aov(Rating ~ Cond + ach_dummy + ind_skill_dummy + poss_money_status_power_dummy + fam_rel_dummy + luck_dummy, data = proud)) 
+
+# annoyed
+mean(SPcond$annoyed_SP) 
+sd(SPcond$annoyed_SP) 
+mean(RSPcond$annoyed_RSP) 
+sd(RSPcond$annoyed_RSP)
+summary(aov(Rating ~ Cond + ach_dummy + ind_skill_dummy + poss_money_status_power_dummy + fam_rel_dummy + luck_dummy, data = annoyed)) 
+
+# jealous
+mean(SPcond$jealous_SP) 
+sd(SPcond$jealous_SP) 
+mean(RSPcond$jealous_RSP) 
+sd(RSPcond$jealous_RSP)
+summary(aov(Rating ~ Cond + ach_dummy + ind_skill_dummy + poss_money_status_power_dummy + fam_rel_dummy + luck_dummy, data = jealous)) 
+
+# upset
+mean(SPcond$upset_SP) 
+sd(SPcond$upset_SP)
+mean(RSPcond$upset_RSP)
+sd(RSPcond$upset_RSP) 
+summary(aov(Rating ~ Cond + ach_dummy + ind_skill_dummy + poss_money_status_power_dummy + fam_rel_dummy + luck_dummy, data = upset)) 
+
+# angry
+mean(SPcond$angry_SP) 
+sd(SPcond$angry_SP) 
+mean(RSPcond$angry_RSP) 
+sd(RSPcond$angry_RSP) 
+summary(aov(Rating ~ Cond + ach_dummy + ind_skill_dummy + poss_money_status_power_dummy + fam_rel_dummy + luck_dummy, data = angry)) 
+
+# inferior
+mean(SPcond$inferior_SP) 
+sd(SPcond$inferior_SP) 
+mean(RSPcond$inferior_RSP) 
+sd(RSPcond$inferior_RSP) 
+summary(aov(Rating ~ Cond + ach_dummy + ind_skill_dummy + poss_money_status_power_dummy + fam_rel_dummy + luck_dummy, data = inferior)) 
+```
+
+## Discussion
+
+### Summary of Replication Attempt
+
+
+
+### Commentary
+(a)
+(b) 
+(c) 
